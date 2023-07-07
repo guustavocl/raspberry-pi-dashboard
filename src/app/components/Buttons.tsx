@@ -15,8 +15,12 @@ const hassToken = process.env.NEXT_PUBLIC_HASS_TOKEN || "";
 let connection: Connection;
 
 async function createHassConnection() {
-  const auth = createLongLivedTokenAuth(hassUrl, hassToken);
-  connection = await createConnection({ auth });
+  try {
+    const auth = createLongLivedTokenAuth(hassUrl, hassToken);
+    connection = await createConnection({ auth });
+  } catch (error) {
+    console.log(error);
+  }
 }
 createHassConnection();
 
