@@ -9,11 +9,11 @@ export default function Page() {
         quality={90}
         priority={true}
         placeholder="empty"
-        src={"/bg.jpg"}
+        src={"/bg2.jpg"}
         className="-z-50"
         style={{
           objectFit: "cover",
-          opacity: 0.4,
+          opacity: 0.8,
           backgroundColor: "#080808",
           backgroundRepeat: "repeat",
           backgroundPosition: "center",

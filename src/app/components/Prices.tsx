@@ -55,24 +55,24 @@ const CryptoPrices = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2 w-[15rem] text-3xl justify-center items-center text-center">
-      <div className="flex flex-col h-full w-full rounded-xl p-1 bg-violet-700/30 backdrop-blur">
+    <div className="flex flex-col gap-2 w-[15rem] text-3xl justify-center items-center text-center [&>div]:bg-[#EE0A69]/60 ">
+      <div className="flex flex-col h-full w-full rounded-xl p-1 backdrop-blur">
         <span className="font-mono">BTC/USDT</span>
         <span className="text-zinc-300 text-glow-blue-500">{formatter.format(prices["BTCUSDT"]?.price || 0)}</span>
       </div>
-      <div className="flex flex-col h-full w-full rounded-xl p-1 bg-violet-700/30 backdrop-blur">
+      <div className="flex flex-col h-full w-full rounded-xl p-1 backdrop-blur">
         <span className="font-mono">ETH/USDT</span>
         <span className="text-zinc-300 text-glow-blue-500">{formatter.format(prices["ETHUSDT"]?.price || 0)}</span>
       </div>
-      <div className="flex flex-col h-full w-full rounded-xl p-1 bg-violet-700/30 backdrop-blur">
+      <div className="flex flex-col h-full w-full rounded-xl p-1 backdrop-blur">
         <span className="font-mono">BNB/USDT</span>
         <span className="text-zinc-300 text-glow-blue-500">{formatter.format(prices["BNBUSDT"]?.price || 0)}</span>
       </div>
-      <div className="flex flex-col h-full w-full rounded-xl p-1 bg-violet-700/30 backdrop-blur">
+      <div className="flex flex-col h-full w-full rounded-xl p-1backdrop-blur">
         <span className="font-mono">SOL/USDT</span>
         <span className="text-zinc-300 text-glow-blue-500">{formatter.format(prices["SOLUSDT"]?.price || 0)}</span>
       </div>
-      <div className="flex flex-col h-full w-full rounded-xl p-1 bg-violet-700/30 backdrop-blur">
+      <div className="flex flex-col h-full w-full rounded-xl p-1 backdrop-blur">
         <span className="font-mono">USD/BRL</span>
         <span className="text-zinc-300 text-glow-blue-500">R{formatter.format(prices["USDBRL"]?.price || 0)}</span>
       </div>
