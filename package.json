@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-app-boilerplate",
+  "name": "raspberry-pi-dashboard",
   "version": "0.1.0",
-  "description": "A Next.js 13 App directory boilerplate",
-  "repository": "https://github.com/guustavocl/nextjs-app-boilerplate",
+  "description": "My pi dashboard to check crypto prices and control my IoT devices",
+  "repository": "https://github.com/guustavocl/raspberry-pi-dashboard.git",
   "author": "@guustavocl - https://gus.sh/",
   "license": "MIT",
   "private": true,

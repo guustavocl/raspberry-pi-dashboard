@@ -16,11 +16,9 @@ RUN yarn build
 # Production image, copy all the files and run next
 FROM alpine AS runner
 WORKDIR /app
-ENV NODE_ENV production
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/.env.production.local ./.env.production.local
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/next.config.js ./next.config.js
@@ -31,6 +29,3 @@ RUN chown -R nextjs:nodejs /app/.next
 USER nextjs
 EXPOSE 3000
 CMD ["yarn", "start"]
-
-# create image with this command: sudo docker build . -t pi.gus.sh-image
-# run container with this command: sudo docker run -d --name pi.gus.sh --network host pi.gus.sh-image

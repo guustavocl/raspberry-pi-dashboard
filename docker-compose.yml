@@ -1,0 +1,24 @@
+version: "3"
+services:
+  image:
+    container_name: pi.gus.sh
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_HASS_URL: https://localpi.gus.sh
+      NEXT_PUBLIC_HASS_TOKEN: hass_token
+      NEXT_PUBLIC_DISCORD_USER_ID: 166331543378198528
+    networks:
+      - npm
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: '2GB'
+networks: 
+  npm: 
+    external: 
+      name: npm

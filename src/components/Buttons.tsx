@@ -34,7 +34,6 @@ const Buttons = () => {
   };
 
   const fireHassEvent = async (entity: string) => {
-    console.log("here: ", entity);
     if (connection) {
       await connection.sendMessage({
         type: "call_service",

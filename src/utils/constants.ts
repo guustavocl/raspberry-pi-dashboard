@@ -1,1 +1,1 @@
-export const USER_ID = process.env.discordUserId || "166331543378198528";
+export const USER_ID = process.env.NEXT_PUBLIC_DISCORD_USER_ID || "166331543378198528";
