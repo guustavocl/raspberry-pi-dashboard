@@ -22,7 +22,7 @@ const Clock = () => {
 
   return (
     <div className="flex flex-col rounded-xl w-full items-center justify-around gap-1">
-      <div className="text-[11rem] leading-[7rem]">
+      <div className="text-[11rem] leading-[9rem]">
         {hours}
         <span className="animate-pulse">:</span>
         {minutes}

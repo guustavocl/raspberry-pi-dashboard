@@ -77,7 +77,7 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
   return (
     <div
       className={twMerge(
-        "group h-auto select-none p-4 hue-rotate-15 backdrop-blur md:h-48 w-2/4 self-center bg-black/50 rounded-md",
+        "group h-auto select-none p-4 hue-rotate-15 backdrop-blur md:h-56 w-2/4 self-center bg-black/50 rounded-md",
         props.className
       )}
     >
@@ -89,17 +89,17 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}
-              className="h-28 w-28 select-none justify-self-start rounded-lg"
+              className="h-32 w-32 select-none justify-self-start rounded-lg"
               alt="album cover"
             />
             <div className="flex flex-col justify-center w-full">
-              <h2 className="truncate text-xl font-semibold leading-tight text-pink-100">
+              <h2 className="truncate text-3xl font-semibold leading-tight text-pink-100">
                 {user?.spotify?.song || lastPlayed?.track?.name}
               </h2>
-              <h4 className="truncate text-sm leading-tight text-pink-100 opacity-80">
+              <h4 className="truncate text-lg leading-tight text-pink-100 opacity-80">
                 by {user?.spotify?.artist || lastPlayed?.track?.artists?.[0]?.name}
               </h4>
-              <h4 className="truncate text-sm leading-tight text-pink-100 opacity-80">
+              <h4 className="truncate text-lg leading-tight text-pink-100 opacity-80">
                 on {user?.spotify?.album || lastPlayed?.track?.album?.name}
               </h4>
               <div className="flex flex-row gap-4 pt-4 w-full items-center justify-center -translate-x-8">
@@ -120,7 +120,7 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
                 />
               </div>
 
-              <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-pink-100">
+              <div className="mt-1 flex items-center justify-between px-0.5 text-lg text-pink-100">
                 {elapsed ? <span>{getMinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
                 {duration ? <span>{getMinuteAndSeconds(duration)}</span> : <span>00:00</span>}
               </div>
