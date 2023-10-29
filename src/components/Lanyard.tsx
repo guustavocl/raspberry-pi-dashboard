@@ -89,10 +89,10 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}
-              className="h-28 w-28 select-none justify-self-start rounded-lg md:col-span-4"
+              className="h-28 w-28 select-none justify-self-start rounded-lg"
               alt="album cover"
             />
-            <div className="col-span-8 flex flex-col justify-center md:col-span-8">
+            <div className="flex flex-col justify-center w-full">
               <h2 className="truncate text-xl font-semibold leading-tight text-pink-100">
                 {user?.spotify?.song || lastPlayed?.track?.name}
               </h2>
